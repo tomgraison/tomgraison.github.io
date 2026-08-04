@@ -120,6 +120,22 @@ opacity:1;
 transform:translateY(0);
 }
 }
+#typing{
+color:#00d9ff;
+font-weight:bold;
+min-height:35px;
+}
+
+#typing::after{
+content:"|";
+animation:blink .7s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:0;
+}
+}
 </style>
 
 </head>
@@ -142,7 +158,7 @@ height:260px;
   
 <h1>Hi I'm Tom Graison</h1>
 
-<h2>• Photographer • Editor</h2>
+<h2 id="typing"></h2>
 
 <p>
 kelakam, Kannur, Kerala.
@@ -219,6 +235,40 @@ Stay tuned!
 © 2026 Tom Graison | All Rights Reserved
 
 </footer>
+<script>
+const text = [
+"📷 Photographer",
+"🎬 Editor",
+"💻 Coding Enthusiast"
+];
 
+let word = 0;
+let char = 0;
+let deleting = false;
+
+function typingEffect() {
+    const element = document.getElementById("typing");
+    const current = text[word];
+
+    if (!deleting) {
+        element.textContent = current.substring(0, char++);
+        if (char > current.length) {
+            deleting = true;
+            setTimeout(typingEffect, 1200);
+            return;
+        }
+    } else {
+        element.textContent = current.substring(0, char--);
+        if (char < 0) {
+            deleting = false;
+            word = (word + 1) % text.length;
+        }
+    }
+
+    setTimeout(typingEffect, deleting ? 50 : 100);
+}
+
+typingEffect();
+</script>
 </body>
 </html>

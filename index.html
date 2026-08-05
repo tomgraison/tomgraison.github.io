@@ -51,7 +51,19 @@ transform:scale(1.05);
 box-shadow:0 0 45px #00d9ff;
   }
   .hero img{
-animation:photoFloat 4s ease-in-out infinite;
+animation:photoIn 1.2s ease forwards;
+}
+
+@keyframes photoIn{
+0%{
+opacity:0;
+transform:translateY(60px) scale(.9);
+}
+
+100%{
+opacity:1;
+transform:translateY(0) scale(1);
+}
 }
 
 @keyframes photoFloat{

@@ -348,6 +348,16 @@ transform:translate(-30px,20px) scale(0.8);
 opacity:.2;
 }
 }
+  .reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+} 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -390,7 +400,7 @@ Creating creative visuals.
 
 </header>
 
-<section id="about">
+<section id="about" class="reveal">
 
 <h3>About </h3>
 
@@ -401,7 +411,7 @@ take a look at my website👨‍💻
 </div>
 
 </section>
-<section id="interests">
+<section id="interests" class="reveal">
 <h3>Interests</h3>
 
 <div class="card">
@@ -416,7 +426,7 @@ take a look at my website👨‍💻
 </div>
 </section>
 
-<section id="works">
+<section id="works" class="reveal">
 
 <h3>Works</h3>
 
@@ -433,7 +443,7 @@ Stay tuned!
 </div>
 
 </section>
-  <section id="contact">
+  <section id="contact" class="reveal">
 
 <h3>Contact</h3>
 
@@ -488,6 +498,19 @@ for(let i = 0; i < 30; i++){
 
   particles.appendChild(p);
 }
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach((element)=>{
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      element.classList.add("active");
+    }
+  });
+});
+
 </script>
 </body>
 </html>

@@ -171,6 +171,21 @@ border-radius:50px;
 transition:.3s ease;
 box-shadow:0 8px 20px rgba(255,255,255,.08);
 }
+  .hero .btn{
+opacity:0;
+animation:buttonFade 1.2s ease forwards;
+animation-delay:3.5s;
+}
+
+@keyframes buttonFade{
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+}
 .btn:hover{
 transform:translateY(-4px);
 background:#f8f8f8;

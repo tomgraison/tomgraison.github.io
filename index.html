@@ -50,6 +50,21 @@ transition:0.4s;
 transform:scale(1.05);
 box-shadow:0 0 45px #00d9ff;
   }
+  .hero img{
+animation:photoFloat 4s ease-in-out infinite;
+}
+
+@keyframes photoFloat{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+100%{
+transform:translateY(0);
+}
+}
 .hero h1{
 font-size:42px;
 font-weight:700;
@@ -373,7 +388,7 @@ opacity:.2;
 
 <div class="hero">
   
-<img src="profile4.jpeg"
+<img class="profile-photo" src="profile4.jpeg"
      alt="Tom Graison"
      style="width:260px;
 height:260px;

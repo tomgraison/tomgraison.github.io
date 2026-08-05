@@ -185,32 +185,50 @@ transform:translateY(0);
 header::before{
 content:"";
 position:absolute;
-width:380px;
-height:380px;
+top:-100px;
+left:-100px;
+width:300px;
+height:300px;
 background:#00d9ff;
 border-radius:50%;
-filter:blur(150px);
-opacity:.12;
-top:-100px;
-left:10%;
-animation:floatGlow1 8s ease-in-out infinite alternate;
-pointer-events:none;
+filter:blur(100px);
+opacity:.25;
+animation:moveGlow 8s ease-in-out infinite alternate;
 }
 
 header::after{
 content:"";
 position:absolute;
-width:320px;
-height:320px;
+bottom:-100px;
+right:-100px;
+width:250px;
+height:250px;
 background:#ffffff;
 border-radius:50%;
-filter:blur(160px);
-opacity:.05;
-bottom:-120px;
-right:10%;
-animation:floatGlow2 10s ease-in-out infinite alternate;
-pointer-events:none;
+filter:blur(120px);
+opacity:.12;
+animation:moveGlow2 10s ease-in-out infinite alternate;
 }
+
+@keyframes moveGlow{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(80px,50px);
+}
+}
+
+@keyframes moveGlow2{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(-60px,-40px);
+}
+}
+
+
   body::before{
 content:"";
 position:fixed;

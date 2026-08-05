@@ -299,6 +299,39 @@ white-space:nowrap;
 nav a:hover{
 opacity:0.8;
 }
+  #particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+overflow:hidden;
+}
+
+.particle{
+position:absolute;
+width:6px;
+height:6px;
+background:rgba(255,255,255,.35);
+border-radius:50%;
+animation:floatParticle linear infinite;
+}
+
+@keyframes floatParticle{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -419,7 +452,20 @@ Stay tuned!
 <p style="font-size:13px;color:#666;">
 © 2026 Tom Graison. All Rights Reserved.
 </p>
-
+<div id="particles"></div>
 </footer>
+<script>
+const particles=document.getElementById("particles");
+
+for(let i=0;i<30;i++){
+const p=document.createElement("div");
+p.className="particle";
+p.style.left=Math.random()*100+"%";
+p.style.animationDuration=(8+Math.random()*8)+"s";
+p.style.animationDelay=Math.random()*8+"s";
+p.style.width=p.style.height=(3+Math.random()*5)+"px";
+particles.appendChild(p);
+}
+</script>
 </body>
 </html>

@@ -984,7 +984,21 @@ window.addEventListener("scroll",()=>{
   windowBox.classList.add("open");
 
   document.body.style.overflow = "hidden";
-}
+
+  const images =
+    windowBox.querySelectorAll(".photo-gallery img");
+
+  images.forEach((img, index) => {
+
+    setTimeout(() => {
+
+      const preload = new Image();
+      preload.src = img.src;
+
+    }, index * 300);
+
+  });
+  }
 
 function closePhotography(){
 

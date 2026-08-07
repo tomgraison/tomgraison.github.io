@@ -516,7 +516,19 @@ padding:8px 14px;
 border-radius:30px;
 font-size:13px;
 transition:.3s ease;
+cursor:pointer;
 }
+  .back-button{
+text-decoration:none;
+color:#fff;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
+padding:8px 14px;
+border-radius:30px;
+font-size:13px;
+transition:.3s ease;
+cursor:pointer;
+  }
 
 .back-button:hover{
 color:#00d9ff;
@@ -658,9 +670,9 @@ take a look at my website👨‍💻
   <div class="photo-header">
     <h3>Photography</h3>
 
-    <a href="#interests" class="back-button">
-      ↑ Back
-    </a>
+    <button class="back-button" onclick="closePhotography()">
+  ↑ Back
+    </button>
   </div>
 
   <div class="photo-gallery">

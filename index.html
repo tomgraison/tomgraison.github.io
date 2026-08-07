@@ -812,11 +812,11 @@ take a look at my website👨‍💻
 
   <div class="interests-card">
 
-    <a href="#" class="interest-item" onclick="openPhotography(event)">
+  
+<div class="interest-item">
   <span class="icon">📷</span>
   <span>Photography</span>
-    </a>
-
+</div>
     <div class="interest-item">
       <span class="icon">🎬</span>
       <span>Video Editing</span>
@@ -833,36 +833,6 @@ take a look at my website👨‍💻
     </div>
 
   </div>
-<div id="photographyWindow" class="photo-window">
-
-  <div class="photo-window-content">
-
-    <div class="photo-window-header">
-      <h3>Photography</h3>
-
-      <button class="close-photo" onclick="closePhotography()">
-        ✕
-      </button>
-    </div>
-
-    <div class="photo-gallery">
-
-      <img src="IMG_20260528_085832271.jpg" loading="lazy">
-      <img src="IMG_20260605_170126104.jpg" loading="lazy">
-      <img src="IMG_20260611_145054206.jpg" loading="lazy">
-      <img src="IMG_20260613_144857628.jpg" loading="lazy">
-      <img src="IMG_20260615_185725915.jpg" loading="lazy">
-      <img src="IMG_20260621_181433116.jpg" loading="lazy">
-      <img src="IMG_20260627_121553284.jpg" loading="lazy">
-      <img src="IMG_20260627_121652887.jpg" loading="lazy">
-      <img src="IMG_20260627_140053705.jpg" loading="lazy">
-      <img src="IMG_20260630_162532477.jpg" loading="lazy">
-
-        </div>
-
-  </div>
-
-</div>
 
 </section>
 
@@ -972,41 +942,7 @@ window.addEventListener("scroll",()=>{
     }
   });
 });
-  function openPhotography(event){
-
-  event.preventDefault();
-
-  const windowBox =
-    document.getElementById("photographyWindow");
-
-  windowBox.classList.add("open");
-
-  document.body.style.overflow = "hidden";
-
-  const images =
-    windowBox.querySelectorAll(".photo-gallery img");
-
-  images.forEach((img, index) => {
-
-    setTimeout(() => {
-
-      const preload = new Image();
-      preload.src = img.src;
-
-    }, index * 300);
-
-  });
-  }
-
-function closePhotography(){
-
-  const windowBox =
-    document.getElementById("photographyWindow");
-
-  windowBox.classList.remove("open");
-
-  document.body.style.overflow = "";
-}
+  
 </script>
 </body>
 </html>

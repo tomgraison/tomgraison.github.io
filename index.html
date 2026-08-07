@@ -464,6 +464,38 @@ opacity:.2;
   opacity:1;
   transform:translateY(0);
 } 
+.interests-card{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.interest-item{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:22px;
+text-align:center;
+transition:.35s;
+}
+
+.interest-item:hover{
+transform:translateY(-6px);
+border-color:#00d9ff;
+box-shadow:0 0 25px rgba(0,217,255,.35);
+}
+
+.interest-item .icon{
+display:block;
+font-size:34px;
+margin-bottom:12px;
+}
+
+.interest-item span:last-child{
+font-size:16px;
+font-weight:600;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -515,7 +547,9 @@ Hi,
   
 take a look at my website👨‍💻 
 </div>
-
+  
+</section>
+  
 <section id="interests" class="reveal">
   <h3>Interests</h3>
 

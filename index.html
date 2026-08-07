@@ -496,6 +496,44 @@ margin-bottom:12px;
 font-size:16px;
 font-weight:600;
 }
+  .photo-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:20px;
+}
+
+.photo-gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s ease;
+}
+
+.photo-gallery img:hover{
+transform:scale(1.03);
+border-color:#00d9ff;
+box-shadow:0 0 25px rgba(0,217,255,.35);
+}
+
+.interest-item{
+text-decoration:none;
+color:white;
+display:block;
+cursor:pointer;
+}
+
+@media(max-width:600px){
+.photo-gallery{
+grid-template-columns:1fr;
+}
+
+.photo-gallery img{
+height:240px;
+}
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -555,10 +593,10 @@ take a look at my website👨‍💻
 
   <div class="interests-card">
 
-    <div class="interest-item">
-      <span class="icon">📷</span>
-      <span>Photography</span>
-    </div>
+    <a href="#photography" class="interest-item">
+  <span class="icon">📷</span>
+  <span>Photography</span>
+    </a>
 
     <div class="interest-item">
       <span class="icon">🎬</span>
@@ -577,7 +615,26 @@ take a look at my website👨‍💻
 
   </div>
 </section>
+<section id="photography" class="reveal">
 
+  <h3>Photography</h3>
+
+  <div class="photo-gallery">
+
+    <img src="IMG_20260528_085832271.jpg" alt="Photography 1">
+    <img src="IMG_20260605_170126104.jpg" alt="Photography 2">
+    <img src="IMG_20260611_145054206.jpg" alt="Photography 3">
+    <img src="IMG_20260613_144857628.jpg" alt="Photography 4">
+    <img src="IMG_20260615_185725915.jpg" alt="Photography 5">
+    <img src="IMG_20260621_181433116.jpg" alt="Photography 6">
+    <img src="IMG_20260627_121553284.jpg" alt="Photography 7">
+    <img src="IMG_20260627_121652887.jpg" alt="Photography 8">
+    <img src="IMG_20260627_140053705.jpg" alt="Photography 9">
+    <img src="IMG_20260630_162532477.jpg" alt="Photography 10">
+
+  </div>
+
+</section>
 <section id="works" class="reveal">
 
 <h3>Works</h3>

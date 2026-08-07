@@ -715,18 +715,6 @@ display:block;
 border-radius:18px;
 }
 
-.photo-gallery img{
-width:100%;
-aspect-ratio:3 / 4;
-height:auto;
-object-fit:cover;
-display:block;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.08);
-opacity:0;
-animation:photoAppear .6s ease forwards;
-}
-
 @keyframes photoAppear{
 from{
 opacity:0;
@@ -739,25 +727,7 @@ transform:translateY(0);
 }
 }
 
-@media(max-width:600px){
 
-.photo-window-content{
-width:96%;
-height:92vh;
-padding:15px;
-}
-
-.photo-gallery{
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.photo-gallery img{
-aspect-ratio:3 / 4;
-border-radius:14px;
-}
-
-}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>

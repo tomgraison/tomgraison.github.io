@@ -676,13 +676,7 @@ transform:translateY(0) scale(1);
 display:flex;
 justify-content:space-between;
 align-items:center;
-
-position:sticky;
-top:0;
-z-index:20;
-
 margin-bottom:20px;
-padding-bottom:12px;
 }
 
 .photo-window-header h3{
@@ -717,6 +711,10 @@ align-items:center;
 justify-content:center;
 
 transition:.35s ease;
+  position:fixed;
+top:35px;
+right:35px;
+z-index:3000;
 }
 
 .close-photo:hover{
